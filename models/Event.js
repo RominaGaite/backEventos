@@ -1,17 +1,19 @@
 
-import { Schema, model, Types } from "mongoose";
+import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
+
 
 
 let collection = "events";
 let schema = new Schema({
-    place: { type: Types.ObjectId, ref: 'places' },
+    place: { type: mongoose.Types.ObjectId, ref: 'places' },
     date: { type: Date, required: true },
     photo: { type: String, required: true },
     name: { type: String, required: true },
     description: { type: String, required: true },
-    attendees: { type: Types.ObjectId, ref: "users" },
+    attendees: { type: mongoose.Types.ObjectId, ref: "users" },
     minimumAge: { type: Number, required: true },
-    organizer: { type: Types.ObjectId, ref: 'users' },
+    organizer: { type: mongoose.Types.ObjectId, ref: 'users' },
 
 }, {
     timestamps: true
