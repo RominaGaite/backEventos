@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "users": "node ./models/data/users",
+    "events": "node ./models/data/events",
+    "places": "node ./models/data/places"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -24,6 +27,7 @@
     "@types/cookie-parser": "^1.4.7",
     "@types/cors": "^2.8.17",
     "@types/debug": "^4.1.12",
-    "@types/morgan": "^1.9.9"
+    "@types/morgan": "^1.9.9",
+    "@types/nodemon": "^1.19.6"
   }
 }
