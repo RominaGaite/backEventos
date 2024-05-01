@@ -1,5 +1,7 @@
-import 'dotenv/config.js'
 import express from 'express'
+import 'dotenv/config.js'
+import './config/database.js'
+
 import path from 'path'
 import logger from 'morgan'
 import cors from  'cors'
@@ -7,6 +9,7 @@ import { __dirname } from './utils.js'
 
 import indexRouter from './routes/index.js'
 import usersRouter from './routes/users.js'
+
 
 let app = express();//instacia y crea el servidor
 
